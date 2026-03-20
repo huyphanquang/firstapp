@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[ show edit update destroy ]
 
-  # GET /users or /users.json
+# GET /users or /users.json
 def index
   @users = User.where("name LIKE ?", "%a%")
 end
@@ -73,3 +73,4 @@ end
       params.expect(user: [ :name, :email ])
     end
 end
+
