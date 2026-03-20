@@ -73,4 +73,3 @@ end
       params.expect(user: [ :name, :email ])
     end
 end
-
