@@ -3,13 +3,17 @@ class UsersController < ApplicationController
 
   # GET /users or /users.json
 def index
-  @users = User.all
-  @message = "Lời chào từ controller"
+  @users = User.where("name LIKE ?", "%a%")
 end
-
   # GET /users/1 or /users/1.json
   def show
   end
+
+def index
+  @users = User.all
+  @message = "Lời chào từ controller đã fix indent"
+  puts "DEBUG: có #{@users.count} users"
+end
 
   # GET /users/new
   def new
